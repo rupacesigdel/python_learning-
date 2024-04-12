@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 def display_message():
-    messagebox.showinfo("Message", "I love you rupesh")
+    messagebox.showinfo("Message", "I love you")
 
 def on_click(event):
     canvas.create_text(50, 50, text="❤️", font=("Arial", 24), tags="emoji")
