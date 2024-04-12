@@ -9,7 +9,7 @@ def on_click(event):
     canvas.after(1000, display_message)
 
 root = tk.Tk()
-root.title("Love Emoji")
+root.title("sleep Emoji")
 
 canvas = tk.Canvas(root, width=100, height=100)
 canvas.pack()
