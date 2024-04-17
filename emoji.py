@@ -5,7 +5,7 @@ def display_message():
     messagebox.showinfo("Message", "I want sleep")
     
 def on_click(event):
-    canvas.create_text(50, 50, text="😴😴😴😴😴", font=("Arial", 24), tags="emoji")
+    canvas.create_text(50, 50, text="😴😴😴", font=("Arial", 24), tags="emoji")
     canvas.after(1000, display_message)
 
 root = tk.Tk()
