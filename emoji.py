@@ -1,3 +1,4 @@
+# creat a emoji to send a message tyo click on it.
 import tkinter as tk
 from tkinter import messagebox
 
