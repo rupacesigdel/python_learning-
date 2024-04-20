@@ -1,4 +1,4 @@
-'''classes= ["L.K.G",1, 2, 3, 4, 5, "rupesh", True, False] # string,boolean...etc allow in list.
+classes= ["L.K.G",1, 2, 3, 4, 5, "rupesh", True, False] # string,boolean...etc allow in list.
 print(classes)
 print(type(classes))
 print(len(classes))
@@ -68,17 +68,17 @@ print(classes)
 classes.insert(3,9)
 print(classes)
 
-'''
 
 # extend()
 # let here 2 list and need to be merged one of another then .extend() is used
 l = [100, 200, 300, 400]
 m = [500, 600, 700, 800]
-# l.extend(m)
-# print(l)
+l.extend(m)
+print(l)
 # Or,
 k = l + m
 print(k)
+#  but it is opposit of 1st one.
+m.extend(l)
+print(m)
 
-# m.extend(l)
-# print(m)
