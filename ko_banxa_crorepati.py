@@ -21,7 +21,11 @@ for i in range (0,len(questions)):
     print(f"Option for Rs.{levels[i]} :")
     print(f"a. {question[1]}       b.{question[2]}")
     print(f"c.{question[3]}        d.{question[4]}")
-    reply = int(input("Enter your answer (1-4) :- "))
+    reply = int(input("Enter your answer (1-4) or 0 to quit from here:- "))
+    if (reply == 0):
+        money = levels[i-1]
+        print(" You have choose quit so,:")
+        break
     if (reply == question[-1]):
         print(f"Correct answer!!!, you have won Rs. {levels[i]}")
         if(i == 4):
