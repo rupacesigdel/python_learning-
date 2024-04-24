@@ -1,20 +1,20 @@
-# import pandas as pd
-# print(pd.__version__)
+import pandas as pd
+print(pd.__version__)
 
 
 # how to import works in python
 
 # import pandas
-# pandas.read_csv()
+pandas.read_csv()
 
-# import math
-# math.floor(4.2343)
+import math
+math.floor(4.2343)
 
-# import math
-# from unittest import result
+import math
+from unittest import result
 
-# result = math.sqrt(9)
-# print(result)
+result = math.sqrt(9)
+print(result)
 
 from math import pi, sqrt
 result = sqrt(9) * pi
@@ -50,4 +50,3 @@ print(math.nan, type(math.nan))
 from function import * # in case of * we can use name, average, etc...
 function()
 print(name)
-
