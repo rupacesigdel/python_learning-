@@ -40,3 +40,27 @@ f = open('myfile.txt', 'w')
 lines = ['line1\n', 'line2\n', 'line3\n']
 f.writelines(lines)
 f.close
+
+
+
+# file handeling through seek(),tell()
+
+# seek() and tell() function
+with open('myfile.txt', 'r') as f:
+    print(type(f))
+    # move to rhe 10th byte in the file
+    f.seek(10)
+
+
+    # read the next 5 bytes
+    print(f.tell())
+    data = f.read(5)
+    print(data)
+
+# truncate()
+with open('sample.txt','w') as f:
+    f.write('hello,world!')
+    f.truncate(5) # only 5 bytes or size or word want in my sample file
+
+with open('sample.txt', 'r') as f:
+    print(f.read())
