@@ -1,50 +1,50 @@
-# class Employee:
-#     def __init__(self, name, id):
-#         self.name = name
-#         self.id = id
+class Employee:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
 
-#     def showDetails(self):
-#         print(f"The name of the Employee: {self.id} is {self.name}")
-
-
-# class Programmer(Employee):
-#     def showLanguage(self):
-#         print("The defult language is python")
+    def showDetails(self):
+        print(f"The name of the Employee: {self.id} is {self.name}")
 
 
+class Programmer(Employee):
+    def showLanguage(self):
+        print("The defult language is python")
 
-# e = Employee("Roshan Das", 420)
-# e.showDetails()
-# e1 = Employee("rajan stha", 400)
-# e1.showDetails()
-# e2 = Programmer("ronik sigdel", 430)
-# e2.showLanguage()
-# e3 = Programmer("rejan shah", 415)
-# e3.showLanguage()
+
+
+e = Employee("Roshan Das", 420)
+e.showDetails()
+e1 = Employee("rajan stha", 400)
+e1.showDetails()
+e2 = Programmer("ronik sigdel", 430)
+e2.showLanguage()
+e3 = Programmer("rejan shah", 415)
+e3.showLanguage()
 
 
 # Access Modifiers,types;
 # 1.Public access modifirs
 
-# class Employee:
-#     def __init__(self, age, name):
-#         self.name = name
-#         self.age = age
+class Employee:
+    def __init__(self, age, name):
+        self.name = name
+        self.age = age
 
-# a = Employee(20, "Rupesh")
-# print(a.name)
-# print(a.age)
+a = Employee(20, "Rupesh")
+print(a.name)
+print(a.age)
 
 
 # 2.private access modifirs
-# class Employee:
-#     def __init__(self):
-#       self.__name = "Rupesh"
+class Employee:
+    def __init__(self):
+      self.__name = "Rupesh"
 
-# a = Employee()
-# # print(a.__name) #cannot be accessed directly
-# print(a._Employee__name) # can be accessed indirectly
-# print(a.__dir__())
+a = Employee()
+# print(a.__name) #cannot be accessed directly
+print(a._Employee__name) # can be accessed indirectly
+print(a.__dir__())
 
 
 
