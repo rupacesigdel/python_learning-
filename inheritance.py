@@ -1,3 +1,4 @@
+# Inheritance
 class Employee:
     def __init__(self, name, id):
         self.name = name
@@ -10,7 +11,6 @@ class Employee:
 class Programmer(Employee):
     def showLanguage(self):
         print("The defult language is python")
-
 
 
 e = Employee("Roshan Das", 420)
@@ -68,3 +68,32 @@ print(obj._funName())
 # calling by object of subject class
 print(obj1._name)
 print(obj1._funName())
+
+
+
+
+
+# single inheritance
+# A class inherits properties and behaviors from a single parent class.
+
+class Animal:
+   def __init__(self, name, species):
+      self.name = name
+      self.species = species
+   def make_sound(self):
+      print("Sound made by Animal")
+
+class Dog(Animal):
+   def __init__(self, name, breed):
+      Animal.__init__(self, name, species = "Dog")
+      self.breed = breed
+   def make_sound(self):
+      print("Bark!")
+
+d = Dog("dog","doggy")
+d.make_sound()
+
+a = Animal("Dog", "Dog")
+a.make_sound()
+
+# 
