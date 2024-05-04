@@ -96,4 +96,93 @@ d.make_sound()
 a = Animal("Dog", "Dog")
 a.make_sound()
 
-# 
+
+# Multiple inheritance:
+class Employee:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):
+       print(f"The name is {self.name} ")
+class Dancer:
+    def __init__(self, dance):
+        self.dance = dance
+
+    def show(self):
+       print(f"The dance is {self.dance} ")
+
+class DancerEmployee(Employee, Dancer):
+    def __init__(self, name, dance):
+        self.name = name
+        self.dance = dance
+
+o = DancerEmployee("Pratha", "Classical")
+print(o.name)
+print(o.dance)
+o.show()  # it show which has first input then this value is output, like here is Dancer.
+print(DancerEmployee.mro())
+
+
+
+# Multilevel Inheritance
+class Animal:
+   def __init__(self, name, species):
+      self.name = name
+      self.species = species
+   def show_detail(self):
+      print(f"Name: {self.name}")
+      print(f"Species: {self.species}")
+
+class Dog(Animal):
+   def __init__(self, name, breed):
+      Animal.__init__(self, name, species = "Dog")
+      self.breed = breed
+   def show_detail(self):
+      Animal.show_detail(self)
+      print(f"Breed: {self.breed}")
+
+class GoldenRetriever(Dog):
+    def __init__(self, name, color):
+     Dog.__init__(self, name, breed = "Golden Retriver")
+     self.color = color
+
+    def show_detail(self):
+        Dog.show_detail(self)
+        print(f"Color: {self.color}")
+
+O = GoldenRetriever("tommy", "black")
+O.show_detail()
+
+
+# Hybrid and Hierarchical Inheritance
+# Hybrid;
+
+class BaseClass:
+    pass
+
+class Derived1(BaseClass):
+    pass
+
+class Derived2(BaseClass):
+    pass
+
+class Derived3(Derived1, Derived2):
+    pass
+
+
+# Hierarchical Inheritance;
+
+class BaseClass:
+    pass
+
+class D1(BaseClass):
+    pass
+
+class D2(BaseClass):
+    pass
+
+class Dn(D1):     # here in Dn , n = 1,2,3,4......can be made many more like this.
+    pass
+
+class Dn(D2):     # here in Dn , n = 1,2,3,4......can be made many more like this.
+    pass
