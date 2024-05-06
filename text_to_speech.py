@@ -3,15 +3,24 @@ import win32com.client as wincom
 # you can insert gaps in the narration by adding sleep calls
 import time
 
-speak = wincom.Dispatch("SAPI.SpVoice")
+speaker = wincom.Dispatch("SAPI.SpVoice")
 
 names = ["Rajan", "Sujan", "Bimal"]
+
+for i in names:
+ print("shoutout to "+i)
+
 for name in names:
- text = "Hello!!!"
+ list = name.split()
+ shoutout = f"Shoutout to {list[0]}"
+ speaker.Speak(shoutout)
  
- speak.Speak(text)
+print("Shoutout of all for you")
 
- speak.Speak(name)
- # 3 second sleep
- time.sleep(2) 
 
+#  OR,
+
+#  text = f"Hello!!! {name}"
+#  speaker.Speak(text)
+# # 2 second sleep
+#  time.sleep(2) 
